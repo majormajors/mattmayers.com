@@ -1,0 +1,15 @@
+.homeshell {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.homeshell-line {
+}
+
+.homeshell-line * {
+	display: inline;
+}
+
+.homeshell-line input {
+	outline: none;
+}

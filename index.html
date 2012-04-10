@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mattmayers.com:~ $</title>
+  <meta name="description" content="The personal site of Matt Mayers: Web Developer, Gamer, FOSS Enthusiast, and all-around sweet dude.">
+  <link rel="stylesheet" href="css/homeshell.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  
+  <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/homeshell.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+  $(function(){
+    $("#shell").homeshell();
+    var hs = HomeShell.find("#shell");
+    hs.addCommand("portfolio", function(){
+      tb_show("Portfolio", "#TB_inline?height=400&width=300&inlineId=portfolio");
+    });
+    hs.addCommand("github", function(){
+      window.open("https://github.com/majormajors/");
+    });
+    hs.addCommand("twitter", function(){
+      window.open("http://twitter.com/mattmayers");
+    });
+    hs.addCommand("tumblr", function(){
+      window.open("http://tumblr.mattmayers.com/");
+    });
+    hs.addCommand("flickr", function(){
+      window.open("http://flickr.com/photos/mmayers");
+    });
+    hs.addCommand("email", function(){
+      window.location.replace("mailto:matt@mattmayers.com");
+    });
+    hs.addCommand("echo", function(homeshell, args){
+      homeshell.output(args.join(' '));
+    });
+    hs.addCommand("links", function(homeshell){
+      homeshell.output('<a href="http://www.allhandsactive.com/" target="_blank">all hands active</a>');
+      homeshell.output('<a href="http://turboclaw.com/" target="_blank">turboclaw</a>');
+      homeshell.output('<a href="http://rashystreakers.tumblr.com/" target="_blank">rashystreakers</a>');
+      homeshell.output('<a href="http://thedistrictandthed.com/" target="_blank">theDistrictAndTheD</a>');
+      homeshell.output('<a href="http://shaqtion.com/" target="_blank">shaqtion</a>');
+    });
+    hs.addCommand("ke", function(homeshell){
+      now = new Date();
+      ke = Math.round((now.getHours() * 60 + now.getMinutes()) / 14.4 * 10.0) / 10.0;
+      homeshell.output(ke + " ke");
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id="shell"></div>
+  <div id="tagline" style="display:none">The personal site of Matt Mayers: Web Developer, Gamer, FOSS Enthusiast, and all-around sweet dude.</div>
+  <div id="portfolio" style="display:none">
+    <div style="text-align: center">
+      <p>
+        <a href="http://fastlane.gmblogs.com/" target="_blank">GM: Fastlane<br>
+        <img src="images/portfolio/fastlane.jpg" width="200" height="132" alt="Fastlane" border="0"></a>
+      </p>
+      <p>
+        <a href="http://thelab.gmblogs.com/" target="_blank">GM: The Lab<br>
+        <img src="images/portfolio/thelab.jpg" width="200" height="132" alt="Thelab" border="0"></a>
+      </p>
+      <p>
+        <a href="https://snackwidget.com" target="_blank">Weight Watchers: Snack Widget<br>
+        <img src="images/portfolio/snackwidget.jpg" width="200" height="132" alt="Snackwidget" border="0"></a>
+      </p>
+      <p>
+        <a href="http://cutesttaxdeduction.com/" target="_blank">TurboTax: Cutest Last-Minute Tax Deduction<br>
+        <img src="images/portfolio/cutesttaxdeduction.jpg" width="200" height="132" alt="Cutesttaxdeduction" border="0"></a>
+      </p>
+      <p>
+        <a href="http://freshenupyourfridge.com/" target="_blank">Daisy: Freshen Up Your Fridge<br>
+        <img src="images/portfolio/freshenup.jpg" width="200" height="130" alt="Freshenup" border="0"></a>
+      </p>
+      <p>
+        <a href="http://airoptixcontest.com" target="_blank">Air Optix: Surprise Your Eyes Contest<br>
+        <img src="images/portfolio/airoptix.jpg" width="200" height="132" alt="Airoptix" border="0"></a>
+      </p>
+      <p>
+        <a href="http://thedistrictandthed.com/" target="_blank">The District And The D<br>
+        <img src="images/portfolio/thedistrict.jpg" width="200" height="132" alt="Thedistrict" border="0"></a>
+      </p>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-1806206-1");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+</body>
+</html>
